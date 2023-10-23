@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            /* a) Set a background color for the entire menu (element selector - id selector) */
+            #main-menu {
+                background-color: rgb(41, 39, 39); 
+            }
+            
+            /* b) Style the text color for the navigation items (element selector - id selector) */
+            #main-menu li a {
+                color: rgb(210, 204, 17); 
+            }
+            
+            /* c) Add a hover effect when users hover over the navigation items (class selector) */
+            #main-menu li a:hover {
+                background-color: rgb(39, 7, 98); 
+            }
+            
+            /* d) Adjust the spacing, padding, and margin as needed to make the menu visually appealing (which selector??) */
+            #main-menu li a {
+                padding: 2px 5px; 
+            }
+            
+            /* e) Add styles to an element that comes immediately after another element (combination selector) */
+            #main-menu li a ~ul { 
+                color: rgb(0, 255, 42); 
+                margin-left: none; 
+            }
+            
+            /* f) Style elements that are descendants of another element (descendant selector - e.g.: style links within the menu items) */
+            #main-menu li a {
+                text-decoration: none; 
+                font-weight: bold; 
+            }
+            
+            /* g) Style elements that are direct children of another element (child selector - e.g.: style only the top-level menu items, not nested sub-menus) */
+            #main-menu > li > a {
+                background-color: rgb(225, 8, 8); 
+                color: rgb(205, 227, 9);
+                margin-left: 40px;
+            }
+             /* Style nested sub-menus differently */
+        #main-menu li ul li a {
+            background-color: #555;
+            color: rgb(8, 200, 222);
+            font-style: italic;
+            font-weight: bold;
+            margin-left:none;
+            padding: 2px 5px;
+        }
+        </style>
+    </head>
+    <body>
+        <ul id="main-menu">
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">History</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        
+    </body>
+    </html>
+    
